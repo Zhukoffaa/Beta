@@ -1,0 +1,108 @@
+{
+  "name": "windows-llm-agent",
+  "version": "1.0.0-beta",
+  "description": "Windows приложение-агент для управления удаленными LLM серверами",
+  "main": "dist/backend/main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:renderer\"",
+    "dev:full": "concurrently -k -n TSC,WEB,EL \"npm run dev:backend\" \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "dev:backend": "tsc -w --project backend/tsconfig.json",
+    "dev:renderer": "webpack serve --config renderer/webpack.config.js",
+    "dev:electron": "wait-on tcp:3000 && electron .",
+    "build": "npm run build:backend && npm run build:renderer",
+    "build:backend": "tsc --project backend/tsconfig.json",
+    "build:renderer": "webpack --config renderer/webpack.config.js --mode production",
+    "electron": "electron .",
+    "electron:dev": "electron . --dev",
+    "start": "npm run dev:full",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+  },
+  "keywords": [
+    "electron",
+    "llm",
+    "ssh",
+    "agent",
+    "windows"
+  ],
+  "author": "LLM Agent Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/ssh2": "^1.15.5",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.0.0",
+    "css-loader": "^7.1.2",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "html-webpack-plugin": "^5.6.4",
+    "jest": "^29.0.0",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.13",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "wait-on": "^9.0.1",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@tailwindcss/postcss": "^4.1.13",
+    "axios": "^1.12.2",
+    "diff2html": "^3.4.0",
+    "monaco-editor": "^0.44.0",
+    "react": "^18.0.0",
+    "react-diff-viewer-continued": "^3.4.0",
+    "react-dom": "^18.0.0",
+    "ssh2": "^1.15.0",
+    "yaml": "^2.3.0"
+  },
+  "build": {
+    "appId": "com.llmagent.windows",
+    "productName": "Windows LLM Agent",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/backend/**/*",
+      "renderer/dist/**/*",
+      "tools/**/*",
+      "configs/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "tools/",
+        "to": "tools/"
+      },
+      {
+        "from": "configs/",
+        "to": "configs/"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

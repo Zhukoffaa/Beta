@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-25 17:53:07",
+  "tests": {
+    "file_exists_FileTreePanel.tsx": {
+      "description": "FileTreePanel component exists",
+      "status": "PASSED",
+      "details": [
+        "File exists: C:\\Users\\Andrei Zhukov\\Desktop\\Beta\\renderer\\src\\components\\FileTreePanel.tsx"
+      ]
+    },
+    "content_FileTreePanel.tsx": {
+      "description": "FileTreePanel has improved error handling",
+      "status": "PASSED",
+      "details": [
+        "All patterns found: ['useCallback', 'error', 'setError', 'disabled']"
+      ]
+    },
+    "content_App.tsx": {
+      "description": "App.tsx has server settings button",
+      "status": "PASSED",
+      "details": [
+        "All patterns found: ['handleOpenServerSettings', 'Серверы', 'openServerSettings']"
+      ]
+    },
+    "content_ImageServerParser.tsx": {
+      "description": "ImageServerParser supports multiple images",
+      "status": "PASSED",
+      "details": [
+        "All patterns found: ['multiple', 'onDragOver', 'onDrop', 'images.length']"
+      ]
+    },
+    "content_ocrService.ts": {
+      "description": "OCR service supports multiple images",
+      "status": "PASSED",
+      "details": [
+        "All patterns found: ['processMultipleImages', 'mergeResults', 'Promise.all']"
+      ]
+    },
+    "content_tailwind.config.js": {
+      "description": "Tailwind config has macOS styles",
+      "status": "PASSED",
+      "details": [
+        "All patterns found: ['Inter', 'macos', 'animation', 'backdrop']"
+      ]
+    },
+    "typescript_files": {
+      "description": "TypeScript files syntax check",
+      "status": "PASSED",
+      "details": [
+        "All TypeScript files have valid syntax"
+      ]
+    }
+  },
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "warnings": 0
+  }
+}

@@ -1,0 +1,23 @@
+app:
+  debug: false
+  language: ru
+  logLevel: info
+  name: Windows LLM Agent
+  theme: dark
+  version: 1.0.0-beta
+paths:
+  configs: ./configs
+  logs: ./logs
+  tools: ./tools
+timeouts:
+  deploy: 300000
+  health_check: 10000
+  llm: 60000
+  ssh: 30000
+ui:
+  devTools: false
+  window:
+    height: 800
+    minHeight: 600
+    minWidth: 800
+    width: 1200

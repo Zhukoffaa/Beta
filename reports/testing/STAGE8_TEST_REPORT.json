@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-09-25T10:14:03.150Z",
+  "summary": {
+    "passed": 14,
+    "failed": 0,
+    "warnings": 0,
+    "total": 14,
+    "successRate": 100
+  },
+  "tests": [
+    {
+      "name": "FileIndexer сервис существует",
+      "status": "PASS",
+      "details": "backend/services/fileIndexer.ts",
+      "timestamp": "2025-09-25T10:14:03.145Z"
+    },
+    {
+      "name": "Конфигурация проектов существует",
+      "status": "PASS",
+      "details": "configs/projects.json",
+      "timestamp": "2025-09-25T10:14:03.145Z"
+    },
+    {
+      "name": "FileTreePanel компонент существует",
+      "status": "PASS",
+      "details": "renderer/src/components/FileTreePanel.tsx",
+      "timestamp": "2025-09-25T10:14:03.146Z"
+    },
+    {
+      "name": "ServerSettingsWindow компонент существует",
+      "status": "PASS",
+      "details": "renderer/src/components/ServerSettingsWindow.tsx",
+      "timestamp": "2025-09-25T10:14:03.146Z"
+    },
+    {
+      "name": "FileIndexer сервис содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.146Z"
+    },
+    {
+      "name": "FileTreePanel компонент содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.147Z"
+    },
+    {
+      "name": "ServerSettingsWindow компонент содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.147Z"
+    },
+    {
+      "name": "App.tsx интеграция содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.147Z"
+    },
+    {
+      "name": "IPC обработчики содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.147Z"
+    },
+    {
+      "name": "Projects.json структура содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.148Z"
+    },
+    {
+      "name": "FileTreePanel типы содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.148Z"
+    },
+    {
+      "name": "ServerSettingsWindow типы содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.149Z"
+    },
+    {
+      "name": "FileTreePanel стили содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.149Z"
+    },
+    {
+      "name": "ServerSettingsWindow стили содержит все необходимые элементы",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "2025-09-25T10:14:03.149Z"
+    }
+  ]
+}

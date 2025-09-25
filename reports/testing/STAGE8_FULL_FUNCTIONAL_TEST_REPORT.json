@@ -1,0 +1,156 @@
+{
+  "timestamp": "2025-09-25T10:36:05.923Z",
+  "summary": {
+    "total": 29,
+    "passed": 29,
+    "failed": 0,
+    "successRate": "100.0%"
+  },
+  "results": [
+    {
+      "name": "FileTreePanel React hooks",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileTreePanel event handlers",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileTreePanel styling",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "ServerSettingsWindow modal structure",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "ServerSettingsWindow form elements",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "ServerSettingsWindow validation",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "OCR multiple images processing",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "OCR server fields parsing",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "OCR results merging",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "ImageServerParser multiple upload",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "ImageServerParser OCR integration",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "App.tsx component imports",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "App.tsx state management",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "App.tsx navigation",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Main.ts new IPC handlers",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Main.ts service integration",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileIndexer caching mechanism",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileIndexer async operations",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileIndexer optimization",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "FileIndexer file watching",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "E2E: Project selection config",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "E2E: FileTree to ServerSettings flow",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "E2E: OCR to form filling flow",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "E2E: Configuration persistence",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Tailwind animations config",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Tailwind fonts config",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Tailwind backdrop-blur config",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "CSS macOS styles",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "CSS animations",
+      "status": "PASS",
+      "details": ""
+    }
+  ]
+}

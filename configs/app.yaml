@@ -1,0 +1,49 @@
+app:
+  debug: false
+  language: ru
+  logLevel: info
+  name: Windows LLM Agent
+  theme: dark
+  version: 1.0.0-beta
+llm:
+  model: gpt-3.5-turbo
+  temperature: 0.7
+  maxTokens: 2048
+  topP: 1
+  frequencyPenalty: 0
+  presencePenalty: 0
+  systemPrompt: Вы - полезный ассистент для разработки программного обеспечения.
+    Отвечайте четко и по существу.
+  presets:
+    - name: Разработчик
+      systemPrompt: Вы - опытный разработчик программного обеспечения. Помогайте с
+        кодом, архитектурой и лучшими практиками.
+      temperature: 0.3
+      maxTokens: 4096
+    - name: Аналитик
+      systemPrompt: Вы - системный аналитик. Помогайте с анализом требований,
+        проектированием и документацией.
+      temperature: 0.5
+      maxTokens: 2048
+    - name: Креативный
+      systemPrompt: Вы - креативный помощник. Генерируйте идеи, предлагайте
+        нестандартные решения.
+      temperature: 0.9
+      maxTokens: 1024
+  selectedPreset: custom
+paths:
+  configs: ./configs
+  logs: ./logs
+  tools: ./tools
+timeouts:
+  deploy: 300000
+  health_check: 10000
+  llm: 60000
+  ssh: 30000
+ui:
+  devTools: false
+  window:
+    height: 800
+    minHeight: 600
+    minWidth: 800
+    width: 1200

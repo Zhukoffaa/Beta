@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-09-24T16:24:38.527Z",
+  "result": {
+    "success": true,
+    "stats": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "tests": [
+        {
+          "name": "Структура проекта",
+          "status": "PASSED",
+          "details": "Все 7 каталогов и 10 файлов найдены"
+        },
+        {
+          "name": "Целостность package.json",
+          "status": "PASSED",
+          "details": "Все 8 зависимостей найдены"
+        },
+        {
+          "name": "Установка node_modules",
+          "status": "PASSED",
+          "details": "Все 4 ключевых модулей установлены"
+        },
+        {
+          "name": "Конфигурации сборки",
+          "status": "PASSED",
+          "details": "Конфигурации сборки настроены. Target: ES2020"
+        },
+        {
+          "name": "SSH ключи",
+          "status": "PASSED",
+          "details": "SSH ключи найдены. Размер приватного ключа: 3401 байт"
+        },
+        {
+          "name": "TypeScript компиляция",
+          "status": "PASSED",
+          "details": "TypeScript компиляция успешна"
+        },
+        {
+          "name": "Config Service",
+          "status": "PASSED",
+          "details": "Конфигурационные файлы доступны для чтения"
+        },
+        {
+          "name": "Logger Service",
+          "status": "PASSED",
+          "details": "Запись и чтение логов работает корректно"
+        }
+      ]
+    },
+    "duration": 3290,
+    "successRate": 100
+  },
+  "tests": [
+    {
+      "name": "Структура проекта",
+      "status": "PASSED",
+      "details": "Все 7 каталогов и 10 файлов найдены"
+    },
+    {
+      "name": "Целостность package.json",
+      "status": "PASSED",
+      "details": "Все 8 зависимостей найдены"
+    },
+    {
+      "name": "Установка node_modules",
+      "status": "PASSED",
+      "details": "Все 4 ключевых модулей установлены"
+    },
+    {
+      "name": "Конфигурации сборки",
+      "status": "PASSED",
+      "details": "Конфигурации сборки настроены. Target: ES2020"
+    },
+    {
+      "name": "SSH ключи",
+      "status": "PASSED",
+      "details": "SSH ключи найдены. Размер приватного ключа: 3401 байт"
+    },
+    {
+      "name": "TypeScript компиляция",
+      "status": "PASSED",
+      "details": "TypeScript компиляция успешна"
+    },
+    {
+      "name": "Config Service",
+      "status": "PASSED",
+      "details": "Конфигурационные файлы доступны для чтения"
+    },
+    {
+      "name": "Logger Service",
+      "status": "PASSED",
+      "details": "Запись и чтение логов работает корректно"
+    }
+  ]
+}

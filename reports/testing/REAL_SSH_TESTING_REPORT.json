@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "totalTests": 4,
+    "passedTests": 4,
+    "failedTests": 0,
+    "successRate": 100,
+    "totalDuration": 11
+  },
+  "details": {
+    "sshConnection": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:51:46.955Z] [sshConnection] [INFO] Начало тестирования SSH подключения",
+        "[2025-09-24T16:51:46.960Z] [sshConnection] [INFO] Подключение к 213.181.108.221:39166...",
+        "[2025-09-24T16:51:48.359Z] [sshConnection] [INFO] SSH подключение установлено успешно",
+        "[2025-09-24T16:51:48.499Z] [sshConnection] [INFO] SSH подключение закрыто"
+      ],
+      "duration": 1400
+    },
+    "fileOperations": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:51:49.368Z] [fileOperations] [INFO] Начало тестирования файловых операций",
+        "[2025-09-24T16:51:50.733Z] [fileOperations] [INFO] SSH подключение для SFTP установлено",
+        "[2025-09-24T16:51:51.313Z] [fileOperations] [INFO] SFTP сессия создана",
+        "[2025-09-24T16:51:51.456Z] [fileOperations] [INFO] Директория /tmp/llm_agent_test создана/существует",
+        "[2025-09-24T16:51:51.904Z] [fileOperations] [INFO] Файл /tmp/llm_agent_test/test_file.txt создан",
+        "[2025-09-24T16:51:52.483Z] [fileOperations] [INFO] Файл прочитан, содержимое: Test file created at 2025-09-24T16:51:51.456Z...",
+        "[2025-09-24T16:51:52.623Z] [fileOperations] [INFO] Файл /tmp/llm_agent_test/test_file.txt удален",
+        "[2025-09-24T16:51:52.767Z] [fileOperations] [INFO] Директория /tmp/llm_agent_test удалена",
+        "[2025-09-24T16:51:52.767Z] [fileOperations] [INFO] Все файловые операции выполнены успешно"
+      ],
+      "errors": [],
+      "duration": 3399
+    },
+    "commandExecution": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:51:53.783Z] [commandExecution] [INFO] Начало тестирования выполнения команд",
+        "[2025-09-24T16:51:55.159Z] [commandExecution] [INFO] SSH подключение для команд установлено",
+        "[2025-09-24T16:51:55.160Z] [commandExecution] [INFO] Выполнение команды: whoami",
+        "[2025-09-24T16:51:55.625Z] [commandExecution] [INFO] Команда \"whoami\" выполнена успешно",
+        "[2025-09-24T16:51:55.625Z] [commandExecution] [INFO] Результат: root",
+        "[2025-09-24T16:51:55.625Z] [commandExecution] [INFO] Выполнение команды: pwd",
+        "[2025-09-24T16:51:56.081Z] [commandExecution] [INFO] Команда \"pwd\" выполнена успешно",
+        "[2025-09-24T16:51:56.081Z] [commandExecution] [INFO] Результат: /root",
+        "[2025-09-24T16:51:56.081Z] [commandExecution] [INFO] Выполнение команды: ls -la /tmp",
+        "[2025-09-24T16:51:56.551Z] [commandExecution] [INFO] Команда \"ls -la /tmp\" выполнена успешно",
+        "[2025-09-24T16:51:56.552Z] [commandExecution] [INFO] Результат: total 158392\ndrwxrwxrwt 1 root root      4096 Sep 24 16:51 .\ndrwxr-xr-x 1 root root       135 Sep 23...",
+        "[2025-09-24T16:51:56.552Z] [commandExecution] [INFO] Выполнение команды: python3 --version",
+        "[2025-09-24T16:51:57.018Z] [commandExecution] [INFO] Команда \"python3 --version\" выполнена успешно",
+        "[2025-09-24T16:51:57.018Z] [commandExecution] [INFO] Результат: Python 3.8.10",
+        "[2025-09-24T16:51:57.018Z] [commandExecution] [INFO] Выполнение команды: which python3",
+        "[2025-09-24T16:51:57.484Z] [commandExecution] [INFO] Команда \"which python3\" выполнена успешно",
+        "[2025-09-24T16:51:57.484Z] [commandExecution] [INFO] Результат: /usr/bin/python3",
+        "[2025-09-24T16:51:57.484Z] [commandExecution] [INFO] Выполнение команды: df -h",
+        "[2025-09-24T16:51:58.104Z] [commandExecution] [INFO] Команда \"df -h\" выполнена успешно",
+        "[2025-09-24T16:51:58.104Z] [commandExecution] [INFO] Результат: Filesystem                         Size  Used Avail Use% Mounted on\noverlay                         ...",
+        "[2025-09-24T16:51:58.104Z] [commandExecution] [INFO] Выполнение команды: free -m",
+        "[2025-09-24T16:51:58.576Z] [commandExecution] [INFO] Команда \"free -m\" выполнена успешно",
+        "[2025-09-24T16:51:58.577Z] [commandExecution] [INFO] Результат: total        used        free      shared  buff/cache   available\nMem:        2063717      521424   ...",
+        "[2025-09-24T16:51:58.577Z] [commandExecution] [INFO] Выполнение команды: uname -a",
+        "[2025-09-24T16:51:59.040Z] [commandExecution] [INFO] Команда \"uname -a\" выполнена успешно",
+        "[2025-09-24T16:51:59.040Z] [commandExecution] [INFO] Результат: Linux 1e8eb4ce8db6 6.8.0-59-generic #61~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 15 17:03:15 UTC 2...",
+        "[2025-09-24T16:51:59.040Z] [commandExecution] [INFO] Все команды выполнены успешно"
+      ],
+      "errors": [],
+      "duration": 5257
+    },
+    "portTunneling": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:52:00.049Z] [portTunneling] [INFO] Начало тестирования SSH туннелирования",
+        "[2025-09-24T16:52:01.413Z] [portTunneling] [INFO] SSH подключение для туннеля установлено",
+        "[2025-09-24T16:52:01.418Z] [portTunneling] [INFO] SSH туннель активен на порту 8090",
+        "[2025-09-24T16:52:01.419Z] [portTunneling] [INFO] Новое подключение к туннелю",
+        "[2025-09-24T16:52:01.420Z] [portTunneling] [INFO] Тестовое подключение к туннелю успешно",
+        "[2025-09-24T16:52:01.421Z] [portTunneling] [INFO] SSH туннелирование протестировано успешно"
+      ],
+      "errors": [],
+      "duration": 1372
+    }
+  },
+  "sshConfig": {
+    "host": "213.181.108.221",
+    "port": 39166,
+    "username": "root"
+  },
+  "timestamp": "2025-09-24T16:52:01.421Z"
+}

@@ -1,0 +1,41 @@
+# Прокси подключение через ssh3.vast.ai (основное)
+Host llm-proxy
+    HostName ssh3.vast.ai
+    User root
+    Port 20614
+    IdentityFile ./ssh_keys/llm_server_key
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    PasswordAuthentication no
+    PubkeyAuthentication yes
+    BatchMode yes
+
+# Прямое подключение (резервное, если прокси не работает)
+Host llm-server
+    HostName 173.207.82.240
+    User root
+    Port 40038
+    IdentityFile ./ssh_keys/llm_server_key
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    PasswordAuthentication no
+    PubkeyAuthentication yes
+    BatchMode yes
+
+# Backup old server config
+Host llm-server-old
+    HostName 213.181.108.221
+    User root
+    Port 39166
+    IdentityFile ./ssh_keys/llm_server_key
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    PasswordAuthentication no
+    PubkeyAuthentication yes
+    BatchMode yes

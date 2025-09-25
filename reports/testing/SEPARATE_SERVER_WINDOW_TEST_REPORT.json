@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-09-25 17:45:07",
+  "tests": [
+    {
+      "name": "Content check: main.ts server window implementation",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    },
+    {
+      "name": "Content check: preload.js IPC methods",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    },
+    {
+      "name": "Content check: App.tsx server settings integration",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    },
+    {
+      "name": "App.tsx ServerSettingsWindow import removed",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    },
+    {
+      "name": "Package.json dependencies",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    },
+    {
+      "name": "TypeScript config exists",
+      "status": "PASS",
+      "details": "",
+      "timestamp": "17:45:07"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

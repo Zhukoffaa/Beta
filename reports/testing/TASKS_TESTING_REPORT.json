@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "totalTests": 4,
+    "passedTests": 4,
+    "failedTests": 0,
+    "successRate": 100,
+    "totalDuration": 16
+  },
+  "details": {
+    "deployTask": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:49:59.607Z] [deployTask] [INFO] Начало тестирования deployTask",
+        "[2025-09-24T16:49:59.612Z] [deployTask] [INFO] Тестирование логики развертывания",
+        "[2025-09-24T16:49:59.613Z] [deployTask] [INFO] Конфигурация развертывания валидна",
+        "[2025-09-24T16:49:59.613Z] [deployTask] [INFO] Симуляция SSH подключения",
+        "[2025-09-24T16:50:00.616Z] [deployTask] [INFO] Симуляция проверки системных требований",
+        "[2025-09-24T16:50:01.116Z] [deployTask] [INFO] Симуляция создания директории",
+        "[2025-09-24T16:50:01.433Z] [deployTask] [INFO] Симуляция копирования скрипта",
+        "[2025-09-24T16:50:02.235Z] [deployTask] [INFO] Симуляция запуска развертывания",
+        "[2025-09-24T16:50:04.251Z] [deployTask] [INFO] Симуляция проверки результата",
+        "[2025-09-24T16:50:04.751Z] [deployTask] [INFO] Все этапы развертывания протестированы",
+        "[2025-09-24T16:50:04.752Z] [deployTask] [INFO] Тестирование deployTask завершено успешно"
+      ],
+      "errors": [],
+      "duration": 5140
+    },
+    "connectTask": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:50:05.266Z] [connectTask] [INFO] Начало тестирования connectTask",
+        "[2025-09-24T16:50:05.273Z] [connectTask] [INFO] Найден свободный порт: 8081",
+        "[2025-09-24T16:50:05.273Z] [connectTask] [INFO] Тестирование логики подключения",
+        "[2025-09-24T16:50:05.274Z] [connectTask] [INFO] Порт 8081 свободен",
+        "[2025-09-24T16:50:05.274Z] [connectTask] [INFO] Конфигурация подключения валидна",
+        "[2025-09-24T16:50:05.274Z] [connectTask] [INFO] Симуляция SSH подключения",
+        "[2025-09-24T16:50:06.283Z] [connectTask] [INFO] Симуляция создания SSH туннеля",
+        "[2025-09-24T16:50:07.784Z] [connectTask] [INFO] Симуляция проверки здоровья LLM",
+        "[2025-09-24T16:50:08.600Z] [connectTask] [INFO] Симуляция проверки API эндпоинтов",
+        "[2025-09-24T16:50:09.202Z] [connectTask] [INFO] Все этапы подключения протестированы",
+        "[2025-09-24T16:50:09.202Z] [connectTask] [INFO] Тестирование connectTask завершено успешно"
+      ],
+      "errors": [],
+      "duration": 3936
+    },
+    "chatTask": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:50:09.716Z] [chatTask] [INFO] Начало тестирования chatTask",
+        "[2025-09-24T16:50:09.717Z] [chatTask] [INFO] Тестирование логики чата",
+        "[2025-09-24T16:50:09.717Z] [chatTask] [INFO] Валидация сообщений пройдена",
+        "[2025-09-24T16:50:09.718Z] [chatTask] [INFO] Конфигурация чата валидна",
+        "[2025-09-24T16:50:09.718Z] [chatTask] [INFO] Симуляция запроса 1: test_1758732609718_tboz69ttw",
+        "[2025-09-24T16:50:10.916Z] [chatTask] [INFO] Запрос test_1758732609718_tboz69ttw обработан",
+        "[2025-09-24T16:50:10.917Z] [chatTask] [INFO] Симуляция запроса 2: test_1758732610917_95njaimnt",
+        "[2025-09-24T16:50:11.650Z] [chatTask] [INFO] Запрос test_1758732610917_95njaimnt обработан",
+        "[2025-09-24T16:50:11.651Z] [chatTask] [INFO] Симуляция запроса 3: test_1758732611651_aj8xlgqzl",
+        "[2025-09-24T16:50:12.850Z] [chatTask] [INFO] Запрос test_1758732611651_aj8xlgqzl обработан",
+        "[2025-09-24T16:50:12.850Z] [chatTask] [INFO] Симуляция потокового ответа",
+        "[2025-09-24T16:50:12.850Z] [chatTask] [INFO] Получен чанк: \"Hello\"",
+        "[2025-09-24T16:50:12.967Z] [chatTask] [INFO] Получен чанк: \" there\"",
+        "[2025-09-24T16:50:13.068Z] [chatTask] [INFO] Получен чанк: \"! How\"",
+        "[2025-09-24T16:50:13.185Z] [chatTask] [INFO] Получен чанк: \" can I\"",
+        "[2025-09-24T16:50:13.300Z] [chatTask] [INFO] Получен чанк: \" help you\"",
+        "[2025-09-24T16:50:13.415Z] [chatTask] [INFO] Получен чанк: \"?\"",
+        "[2025-09-24T16:50:13.517Z] [chatTask] [INFO] Симуляция отмены запроса",
+        "[2025-09-24T16:50:13.733Z] [chatTask] [INFO] Запрос test_1758732613517_akdky59e4 отменен",
+        "[2025-09-24T16:50:13.733Z] [chatTask] [INFO] Все функции чата протестированы",
+        "[2025-09-24T16:50:13.733Z] [chatTask] [INFO] Тестирование chatTask завершено успешно"
+      ],
+      "errors": [],
+      "duration": 4017
+    },
+    "integration": {
+      "status": "passed",
+      "logs": [
+        "[2025-09-24T16:50:14.235Z] [integration] [INFO] Начало интеграционного тестирования",
+        "[2025-09-24T16:50:14.235Z] [integration] [INFO] Тестирование интеграции с TaskExecutor",
+        "[2025-09-24T16:50:14.235Z] [integration] [INFO] Симуляция запуска deployTask через TaskExecutor",
+        "[2025-09-24T16:50:14.550Z] [integration] [INFO] Worker поток для deployTask создан",
+        "[2025-09-24T16:50:14.752Z] [integration] [INFO] Сообщения с deployTask обработаны",
+        "[2025-09-24T16:50:14.866Z] [integration] [INFO] Задача deployTask завершена",
+        "[2025-09-24T16:50:14.866Z] [integration] [INFO] Симуляция запуска connectTask через TaskExecutor",
+        "[2025-09-24T16:50:15.170Z] [integration] [INFO] Worker поток для connectTask создан",
+        "[2025-09-24T16:50:15.383Z] [integration] [INFO] Сообщения с connectTask обработаны",
+        "[2025-09-24T16:50:15.486Z] [integration] [INFO] Задача connectTask завершена",
+        "[2025-09-24T16:50:15.487Z] [integration] [INFO] Симуляция запуска chatTask через TaskExecutor",
+        "[2025-09-24T16:50:15.789Z] [integration] [INFO] Worker поток для chatTask создан",
+        "[2025-09-24T16:50:15.990Z] [integration] [INFO] Сообщения с chatTask обработаны",
+        "[2025-09-24T16:50:16.100Z] [integration] [INFO] Задача chatTask завершена",
+        "[2025-09-24T16:50:16.100Z] [integration] [INFO] Тестирование обработки ошибок",
+        "[2025-09-24T16:50:16.100Z] [integration] [INFO] Симуляция ошибки: SSH connection timeout",
+        "[2025-09-24T16:50:16.200Z] [integration] [INFO] Ошибка \"SSH connection timeout\" обработана корректно",
+        "[2025-09-24T16:50:16.201Z] [integration] [INFO] Симуляция ошибки: Authentication failed",
+        "[2025-09-24T16:50:16.318Z] [integration] [INFO] Ошибка \"Authentication failed\" обработана корректно",
+        "[2025-09-24T16:50:16.321Z] [integration] [INFO] Симуляция ошибки: LLM server unavailable",
+        "[2025-09-24T16:50:16.433Z] [integration] [INFO] Ошибка \"LLM server unavailable\" обработана корректно",
+        "[2025-09-24T16:50:16.433Z] [integration] [INFO] Симуляция ошибки: Invalid configuration",
+        "[2025-09-24T16:50:16.534Z] [integration] [INFO] Ошибка \"Invalid configuration\" обработана корректно",
+        "[2025-09-24T16:50:16.534Z] [integration] [INFO] Симуляция ошибки: Network error",
+        "[2025-09-24T16:50:16.648Z] [integration] [INFO] Ошибка \"Network error\" обработана корректно",
+        "[2025-09-24T16:50:16.648Z] [integration] [INFO] Тестирование очистки ресурсов",
+        "[2025-09-24T16:50:16.648Z] [integration] [INFO] Очистка ресурса: SSH connections",
+        "[2025-09-24T16:50:16.702Z] [integration] [INFO] Очистка ресурса: Worker threads",
+        "[2025-09-24T16:50:16.764Z] [integration] [INFO] Очистка ресурса: HTTP requests",
+        "[2025-09-24T16:50:16.825Z] [integration] [INFO] Очистка ресурса: File handles",
+        "[2025-09-24T16:50:16.881Z] [integration] [INFO] Очистка ресурса: Timers and intervals",
+        "[2025-09-24T16:50:16.934Z] [integration] [INFO] Все ресурсы очищены",
+        "[2025-09-24T16:50:16.934Z] [integration] [INFO] Интеграционное тестирование завершено успешно"
+      ],
+      "errors": [],
+      "duration": 2699
+    }
+  },
+  "timestamp": "2025-09-24T16:50:16.935Z"
+}

@@ -1,0 +1,163 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./renderer/src/**/*.{js,jsx,ts,tsx}",
+    "./renderer/public/index.html",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['San Francisco', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'system-ui', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['SF Mono', 'JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        display: ['San Francisco', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'sans-serif'],
+      },
+      fontSize: {
+        'xs': ['0.6875rem', { lineHeight: '0.875rem', letterSpacing: '0.01em' }],
+        'sm': ['0.8125rem', { lineHeight: '1.125rem', letterSpacing: '0.005em' }],
+        'base': ['0.9375rem', { lineHeight: '1.375rem', letterSpacing: '0em' }],
+        'lg': ['1.0625rem', { lineHeight: '1.5rem', letterSpacing: '-0.005em' }],
+        'xl': ['1.1875rem', { lineHeight: '1.625rem', letterSpacing: '-0.01em' }],
+      },
+      spacing: {
+        '0.5': '0.125rem',
+        '1': '0.25rem',
+        '1.5': '0.375rem',
+        '2': '0.5rem',
+        '2.5': '0.625rem',
+        '3': '0.75rem',
+        '3.5': '0.875rem',
+        '4': '1rem',
+      },
+      borderRadius: {
+        'xs': '0.1875rem',
+        'sm': '0.25rem',
+        'md': '0.375rem',
+        'lg': '0.5rem',
+        'xl': '0.625rem',
+        '2xl': '0.75rem',
+      },
+      colors: {
+        macos: {
+          light: {
+            bg: '#ffffff',
+            surface: '#f5f5f7',
+            panel: 'rgba(255, 255, 255, 0.8)',
+            border: 'rgba(0, 0, 0, 0.1)',
+            text: '#1d1d1f',
+            secondary: '#86868b',
+          },
+          dark: {
+            bg: '#000000',
+            surface: '#1c1c1e',
+            panel: 'rgba(28, 28, 30, 0.8)',
+            border: 'rgba(255, 255, 255, 0.1)',
+            text: '#ffffff',
+            secondary: '#98989d',
+          },
+          blue: {
+            50: '#e6f2ff',
+            100: '#b3d9ff',
+            200: '#80c0ff',
+            300: '#4da6ff',
+            400: '#1a8cff',
+            500: '#007aff',
+            600: '#0056cc',
+            700: '#003d99',
+            800: '#002966',
+            900: '#001433',
+          },
+          gray: {
+            50: '#f9f9f9',
+            100: '#f0f0f0',
+            200: '#e6e6e6',
+            300: '#d1d1d6',
+            400: '#8e8e93',
+            500: '#636366',
+            600: '#48484a',
+            700: '#3a3a3c',
+            800: '#2c2c2e',
+            900: '#1c1c1e',
+          },
+        },
+        accent: {
+          blue: '#007aff',
+          green: '#34c759',
+          orange: '#ff9500',
+          red: '#ff3b30',
+          purple: '#af52de',
+          pink: '#ff2d92',
+          yellow: '#ffcc00',
+        }
+      },
+      transitionDuration: {
+        '150': '150ms',
+        '200': '200ms',
+        '250': '250ms',
+        '300': '300ms',
+      },
+      transitionTimingFunction: {
+        'macos': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'macos-spring': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+      },
+      backdropBlur: {
+        'xs': '2px',
+        'sm': '4px',
+        'md': '8px',
+        'lg': '12px',
+        'xl': '16px',
+        '2xl': '24px',
+      },
+      boxShadow: {
+        'macos-xs': '0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.06)',
+        'macos-sm': '0 2px 4px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08)',
+        'macos': '0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06)',
+        'macos-lg': '0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+        'macos-xl': '0 16px 48px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.12)',
+        'macos-button': '0 1px 2px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+        'macos-inset': 'inset 0 1px 2px rgba(0, 0, 0, 0.1)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'slide-up': 'slideUp 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'slide-down': 'slideDown 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'scale-in': 'scaleIn 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+        'bounce-soft': 'bounceSoft 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(4px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-4px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        pulseSoft: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+        bounceSoft: {
+          '0%, 20%, 53%, 80%, 100%': { transform: 'translateY(0)' },
+          '40%, 43%': { transform: 'translateY(-2px)' },
+          '70%': { transform: 'translateY(-1px)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+  darkMode: 'class',
+}

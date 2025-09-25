@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "id": "test-server",
+      "name": "Test LLM Server",
+      "host": "213.181.108.221",
+      "port": 39166,
+      "user": "root",
+      "sshKey": "./configs/ssh_keys/llm_server_key",
+      "deployPath": "/opt/llm",
+      "llmPort": 8080,
+      "status": "disconnected",
+      "deployed": false,
+      "connected": false,
+      "lastCheck": null,
+      "projectPath": "/root/llm-project",
+      "tunnelPort": 34170,
+      "proxyCommand": "ssh -p 34170 root@ssh2.vast.ai -L 8080:localhost:8080"
+    }
+  ],
+  "activeServer": "test-server",
+  "lastUpdated": null
+}
