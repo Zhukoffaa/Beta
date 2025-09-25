@@ -1,0 +1,228 @@
+@import "./styles/tailwind.css";
+
+/* Custom base styles */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-900 text-gray-100 antialiased;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars in Electron */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #root {
+    @apply w-screen h-screen;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+  
+  .input-field {
+    @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-gray-800 border border-gray-700 rounded-lg p-4 shadow-lg;
+  }
+  
+  .panel {
+    @apply bg-gray-800 border-r border-gray-700 h-full overflow-y-auto;
+  }
+  
+  .status-connected {
+    @apply text-green-400 bg-green-400/10 border border-green-400/20 rounded-full px-2 py-1 text-xs font-medium;
+  }
+  
+  .status-disconnected {
+    @apply text-red-400 bg-red-400/10 border border-red-400/20 rounded-full px-2 py-1 text-xs font-medium;
+  }
+  
+  .status-connecting {
+    @apply text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-2 py-1 text-xs font-medium animate-pulse;
+  }
+  
+  .status-deploying {
+    @apply text-blue-400 bg-blue-400/10 border border-blue-400/20 rounded-full px-2 py-1 text-xs font-medium animate-pulse;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-700 rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-blue-600 transition-all duration-300 ease-out;
+  }
+  
+  .tab-button {
+    @apply px-4 py-2 text-sm font-medium text-gray-400 hover:text-gray-200 border-b-2 border-transparent hover:border-blue-500 transition-colors duration-200;
+  }
+  
+  .tab-button-active {
+    @apply px-4 py-2 text-sm font-medium text-blue-400 border-b-2 border-blue-500;
+  }
+}
+
+/* Custom utility styles */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+}
+
+/* Monaco Editor dark theme adjustments */
+.monaco-editor {
+  @apply bg-gray-900;
+}
+
+.monaco-editor .margin {
+  @apply bg-gray-800;
+}
+
+/* Chat message styles */
+.message-user {
+  @apply bg-blue-600 text-white rounded-lg rounded-br-sm p-3 ml-12 mb-2 animate-slide-up;
+}
+
+.message-assistant {
+  @apply bg-gray-700 text-gray-100 rounded-lg rounded-bl-sm p-3 mr-12 mb-2 animate-slide-up;
+}
+
+.message-system {
+  @apply bg-yellow-600/20 text-yellow-200 rounded-lg p-2 mx-8 mb-2 text-sm border border-yellow-600/30;
+}
+
+/* Loading animations */
+.loading-dots {
+  @apply inline-flex space-x-1;
+}
+
+.loading-dots > div {
+  @apply w-2 h-2 bg-blue-500 rounded-full animate-pulse;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.spinner {
+  @apply animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500;
+}
+
+/* Electron specific styles */
+.electron-drag {
+  -webkit-app-region: drag;
+}
+
+.electron-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Log viewer styles */
+.log-entry {
+  @apply font-mono text-sm py-1 px-2 border-l-2;
+}
+
+.log-info {
+  @apply border-blue-500 text-blue-300 bg-blue-500/5;
+}
+
+.log-warn {
+  @apply border-yellow-500 text-yellow-300 bg-yellow-500/5;
+}
+
+.log-error {
+  @apply border-red-500 text-red-300 bg-red-500/5;
+}
+
+.log-debug {
+  @apply border-gray-500 text-gray-400 bg-gray-500/5;
+}
+
+/* File explorer styles */
+.file-item {
+  @apply flex items-center py-1 px-2 hover:bg-gray-700 cursor-pointer rounded text-sm;
+}
+
+.file-item-selected {
+  @apply bg-blue-600/20 text-blue-300;
+}
+
+.folder-icon {
+  @apply text-yellow-500 mr-2;
+}
+
+.file-icon {
+  @apply text-gray-400 mr-2;
+}
+
+/* Form styles */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+.form-input {
+  @apply input-field w-full;
+}
+
+.form-textarea {
+  @apply input-field w-full resize-none;
+}
+
+.form-select {
+  @apply input-field w-full;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-gray-800 border border-gray-600 rounded-lg p-6 max-w-md w-full mx-4 animate-fade-in;
+}
+
+/* Tooltip styles */
+.tooltip {
+  @apply absolute z-10 px-2 py-1 text-xs text-white bg-gray-700 border border-gray-600 rounded shadow-lg;
+}
