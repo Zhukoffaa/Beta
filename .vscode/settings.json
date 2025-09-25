@@ -1,0 +1,6 @@
+{
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "scm.alwaysShowActions": true,
+  "scm.diffDecorationsGutterWidth": 6
+}
