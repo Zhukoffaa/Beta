@@ -1,21 +1,70 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' http://localhost:* ws://localhost:*;"><title>Windows LLM Agent</title><style>body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            overflow: hidden;
-        }
-        
-        #root {
-            width: 100vw;
-            height: 100vh;
-        }
-        
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-size: 18px;
-        }</style><script defer="defer" src="bundle.js"></script></head><body><div id="root"><div class="loading">Загрузка Windows LLM Agent...</div></div></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Chat - Тестирование промптов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 OpenAI Chat</h1>
+            <p class="subtitle">Простое приложение для тестирования промптов</p>
+        </header>
+
+        <div class="settings-panel" id="settingsPanel">
+            <div class="setting-group">
+                <label for="apiKey">API Ключ OpenAI:</label>
+                <input type="password" id="apiKey" placeholder="sk-...">
+                <small>Ваш API ключ хранится только в браузере</small>
+            </div>
+            
+            <div class="setting-group">
+                <label for="model">Модель:</label>
+                <select id="model">
+                    <option value="gpt-4">GPT-4</option>
+                    <option value="gpt-4-turbo-preview">GPT-4 Turbo</option>
+                    <option value="gpt-3.5-turbo" selected>GPT-3.5 Turbo</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label for="temperature">Temperature: <span id="tempValue">0.7</span></label>
+                <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.7">
+            </div>
+
+            <div class="setting-group">
+                <label for="systemPrompt">Системный промпт:</label>
+                <textarea id="systemPrompt" rows="3" placeholder="Ты полезный ассистент...">Ты полезный ассистент, который помогает пользователям с их вопросами.</textarea>
+            </div>
+
+            <button id="saveSettings" class="btn btn-primary">Сохранить настройки</button>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <button id="toggleSettings" class="btn btn-secondary">⚙️ Настройки</button>
+                <button id="clearChat" class="btn btn-secondary">🗑️ Очистить чат</button>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+                <div class="message system-message">
+                    👋 Привет! Введите API ключ в настройках и начните общаться с OpenAI.
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <textarea id="messageInput" placeholder="Введите ваше сообщение..." rows="3"></textarea>
+                <button id="sendButton" class="btn btn-primary">Отправить</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>💡 Доступ с iPad: откройте эту страницу в Safari или любом браузере</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
